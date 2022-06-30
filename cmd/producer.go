@@ -5,9 +5,8 @@ Copyright © 2022 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/spf13/cobra"
+	"github.com/tavvfiq/go-kafka-testbed/internal/app"
 )
 
 // producerCmd represents the producer command
@@ -15,7 +14,7 @@ var producerCmd = &cobra.Command{
 	Use:   "producer",
 	Short: "start application as a producer",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("producer called")
+		app.StartProducer()
 	},
 }
 
